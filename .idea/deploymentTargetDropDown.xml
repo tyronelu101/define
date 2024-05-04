@@ -2,7 +2,25 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="DictionaryDaoTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="core.database">
+        <State />
+      </entry>
+      <entry key="feature.dictionary">
+        <State />
+      </entry>
+      <entry key="feature.setup">
+        <State />
+      </entry>
+      <entry key="insert_and_get_works()">
+        <State />
+      </entry>
+      <entry key="test()">
         <State />
       </entry>
     </value>
