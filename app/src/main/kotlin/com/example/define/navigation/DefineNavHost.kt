@@ -1,25 +1,22 @@
 package com.example.define.navigation
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-
+import com.example.define.feature.dictionary.navigation.HomeRoute
+import com.example.define.feature.dictionary.navigation.homeScreen
+import com.example.define.feature.dictionary.navigation.navigateToLanguageSelection
+import com.example.define.feature.dictionary.navigation.navigateToSearch
+import com.example.define.feature.settings.navigation.settingsScreen
 
 @Composable
-fun DefineNavHost() {
-    val navController = rememberNavController()
-
-    NavHost(navController = navController, startDestination = "setup") {
-        composable("setup") {
-            SetupScreen()
-        }
+fun DefineNavHost(navController: NavHostController) {
+    NavHost(navController = navController, startDestination = HomeRoute) {
+        homeScreen(
+            onSearchClick = navController::navigateToSearch,
+            onLanguageClick = navController::navigateToLanguageSelection,
+            onBackClick = navController::popBackStack
+        )
+        settingsScreen()
     }
-
-}
-
-@Composable
-fun SetupScreen() {
-    Text("abc")
 }

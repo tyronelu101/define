@@ -1,0 +1,531 @@
+[
+  {
+    "language": "Arabic",
+    "dictionaries": [
+      {
+        "name": "ardic",
+        "source_language": "english",
+        "target_language": "french",
+        "src": "ardict-eng-3.5.0.json"
+      },
+      {
+        "name": "armedic",
+        "source_language": "english",
+        "target_language": "spanish",
+        "src": "armnedict-all-3.5.0.json"
+      },
+      {
+        "name": "qurandic",
+        "source_language": "english",
+        "target_language": "german",
+        "src": "qurandic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Chinese",
+    "dictionaries": [
+      {
+        "name": "zhdic",
+        "source_language": "english",
+        "target_language": "japanese",
+        "src": "zhdict-eng-3.5.0.json"
+      },
+      {
+        "name": "zhmedic",
+        "source_language": "english",
+        "target_language": "korean",
+        "src": "zhmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "hanzidic",
+        "source_language": "english",
+        "target_language": "vietnamese",
+        "src": "hanzidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Dutch",
+    "dictionaries": [
+      {
+        "name": "nedic",
+        "source_language": "english",
+        "target_language": "portuguese",
+        "src": "nedict-eng-3.5.0.json"
+      },
+      {
+        "name": "nemedic",
+        "source_language": "english",
+        "target_language": "italian",
+        "src": "nemnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "greek",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "French",
+    "dictionaries": [
+      {
+        "name": "frdic",
+        "source_language": "english",
+        "target_language": "chinese",
+        "src": "frdict-eng-3.5.0.json"
+      },
+      {
+        "name": "frmedic",
+        "source_language": "english",
+        "target_language": "russian",
+        "src": "frmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "conjugdic",
+        "source_language": "english",
+        "target_language": "hindi",
+        "src": "conjugdic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "German",
+    "dictionaries": [
+      {
+        "name": "dedic",
+        "source_language": "english",
+        "target_language": "thai",
+        "src": "dedict-eng-3.5.0.json"
+      },
+      {
+        "name": "dmedic",
+        "source_language": "english",
+        "target_language": "turkish",
+        "src": "dmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbendic",
+        "source_language": "english",
+        "target_language": "ukrainian",
+        "src": "verbendic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Greek",
+    "dictionaries": [
+      {
+        "name": "grdic",
+        "source_language": "english",
+        "target_language": "hebrew",
+        "src": "grdict-eng-3.5.0.json"
+      },
+      {
+        "name": "grmedic",
+        "source_language": "english",
+        "target_language": "indonesian",
+        "src": "grmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "hungarian",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Hebrew",
+    "dictionaries": [
+      {
+        "name": "hebdic",
+        "source_language": "english",
+        "target_language": "polish",
+        "src": "hebdict-eng-3.5.0.json"
+      },
+      {
+        "name": "hebmedic",
+        "source_language": "english",
+        "target_language": "swedish",
+        "src": "hebmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "biblidic",
+        "source_language": "english",
+        "target_language": "welsh",
+        "src": "biblidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Hindi",
+    "dictionaries": [
+      {
+        "name": "hindidic",
+        "source_language": "english",
+        "target_language": "portuguese",
+        "src": "hindidict-eng-3.5.0.json"
+      },
+      {
+        "name": "hindimedic",
+        "source_language": "english",
+        "target_language": "italian",
+        "src": "hindimnedict-all-3.5.0.json"
+      },
+      {
+        "name": "sanskritdic",
+        "source_language": "english",
+        "target_language": "greek",
+        "src": "sanskritdic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Hungarian",
+    "dictionaries": [
+      {
+        "name": "hungdic",
+        "source_language": "english",
+        "target_language": "french",
+        "src": "hungdict-eng-3.5.0.json"
+      },
+      {
+        "name": "hungmedic",
+        "source_language": "english",
+        "target_language": "spanish",
+        "src": "hungmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "german",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Indonesian",
+    "dictionaries": [
+      {
+        "name": "indodic",
+        "source_language": "english",
+        "target_language": "japanese",
+        "src": "indodict-eng-3.5.0.json"
+      },
+      {
+        "name": "indomedic",
+        "source_language": "english",
+        "target_language": "korean",
+        "src": "indomnedict-all-3.5.0.json"
+      },
+      {
+        "name": "bahasadic",
+        "source_language": "english",
+        "target_language": "vietnamese",
+        "src": "bahasadic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Italian",
+    "dictionaries": [
+      {
+        "name": "itdic",
+        "source_language": "english",
+        "target_language": "chinese",
+        "src": "itdict-eng-3.5.0.json"
+      },
+      {
+        "name": "itmedic",
+        "source_language": "english",
+        "target_language": "russian",
+        "src": "itmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "hindi",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Japanese",
+    "dictionaries": [
+      {
+        "name": "jmdic",
+        "source_language": "english",
+        "target_language": "thai",
+        "src": "jmdict-eng-3.5.0.json"
+      },
+      {
+        "name": "jmedic",
+        "source_language": "english",
+        "target_language": "turkish",
+        "src": "jmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "kanjidic",
+        "source_language": "english",
+        "target_language": "ukrainian",
+        "src": "kanjidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Korean",
+    "dictionaries": [
+      {
+        "name": "kodic",
+        "source_language": "english",
+        "target_language": "hebrew",
+        "src": "kodict-eng-3.5.0.json"
+      },
+      {
+        "name": "komedic",
+        "source_language": "english",
+        "target_language": "indonesian",
+        "src": "komnedict-all-3.5.0.json"
+      },
+      {
+        "name": "hangulic",
+        "source_language": "english",
+        "target_language": "hungarian",
+        "src": "hangulic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Polish",
+    "dictionaries": [
+      {
+        "name": "polic",
+        "source_language": "english",
+        "target_language": "polish",
+        "src": "polict-eng-3.5.0.json"
+      },
+      {
+        "name": "polmedic",
+        "source_language": "english",
+        "target_language": "swedish",
+        "src": "polmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "welsh",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Portuguese",
+    "dictionaries": [
+      {
+        "name": "ptdic",
+        "source_language": "english",
+        "target_language": "french",
+        "src": "ptdict-eng-3.5.0.json"
+      },
+      {
+        "name": "ptmedic",
+        "source_language": "english",
+        "target_language": "spanish",
+        "src": "ptmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "german",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Russian",
+    "dictionaries": [
+      {
+        "name": "rusic",
+        "source_language": "english",
+        "target_language": "chinese",
+        "src": "rusict-eng-3.5.0.json"
+      },
+      {
+        "name": "rmedic",
+        "source_language": "english",
+        "target_language": "russian",
+        "src": "rmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "cyrildic",
+        "source_language": "english",
+        "target_language": "hindi",
+        "src": "cyrildic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Spanish",
+    "dictionaries": [
+      {
+        "name": "esdic",
+        "source_language": "english",
+        "target_language": "thai",
+        "src": "esdict-eng-3.5.0.json"
+      },
+      {
+        "name": "esmedic",
+        "source_language": "english",
+        "target_language": "turkish",
+        "src": "esmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "ukrainian",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Swedish",
+    "dictionaries": [
+      {
+        "name": "swdic",
+        "source_language": "english",
+        "target_language": "hebrew",
+        "src": "swdict-eng-3.5.0.json"
+      },
+      {
+        "name": "swmedic",
+        "source_language": "english",
+        "target_language": "indonesian",
+        "src": "swmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "hungarian",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Thai",
+    "dictionaries": [
+      {
+        "name": "thdic",
+        "source_language": "english",
+        "target_language": "polish",
+        "src": "thdict-eng-3.5.0.json"
+      },
+      {
+        "name": "thmedic",
+        "source_language": "english",
+        "target_language": "swedish",
+        "src": "thmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "thailexicon",
+        "source_language": "english",
+        "target_language": "welsh",
+        "src": "thailexicon2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Turkish",
+    "dictionaries": [
+      {
+        "name": "trdic",
+        "source_language": "english",
+        "target_language": "french",
+        "src": "trdict-eng-3.5.0.json"
+      },
+      {
+        "name": "trmedic",
+        "source_language": "english",
+        "target_language": "spanish",
+        "src": "trmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "german",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Ukrainian",
+    "dictionaries": [
+      {
+        "name": "ukrdic",
+        "source_language": "english",
+        "target_language": "chinese",
+        "src": "ukrdict-eng-3.5.0.json"
+      },
+      {
+        "name": "ukrmedic",
+        "source_language": "english",
+        "target_language": "russian",
+        "src": "ukrmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "verbidic",
+        "source_language": "english",
+        "target_language": "hindi",
+        "src": "verbidic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Vietnamese",
+    "dictionaries": [
+      {
+        "name": "vietdic",
+        "source_language": "english",
+        "target_language": "thai",
+        "src": "vietdict-eng-3.5.0.json"
+      },
+      {
+        "name": "vietmedic",
+        "source_language": "english",
+        "target_language": "turkish",
+        "src": "vietmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "nhatdic",
+        "source_language": "english",
+        "target_language": "ukrainian",
+        "src": "nhatdic2-en-3.5.0.json"
+      }
+    ]
+  },
+  {
+    "language": "Welsh",
+    "dictionaries": [
+      {
+        "name": "welshdic",
+        "source_language": "english",
+        "target_language": "hebrew",
+        "src": "welshdict-eng-3.5.0.json"
+      },
+      {
+        "name": "welshmedic",
+        "source_language": "english",
+        "target_language": "indonesian",
+        "src": "welshmnedict-all-3.5.0.json"
+      },
+      {
+        "name": "cymraegdic",
+        "source_language": "english",
+        "target_language": "hungarian",
+        "src": "cymraegdic2-en-3.5.0.json"
+      }
+    ]
+  }
+]

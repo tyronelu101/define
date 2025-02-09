@@ -19,12 +19,21 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
 rootProject.name = "Define"
 include(":app")
 
 include("core:data")
 include(":core:database")
+include(":core:datastore")
+include(":core:datastore-proto")
+
 include(":core:domain")
-////include(":feature:dictionary")
-//include(":feature:setup")
+include(":core:models")
+include(":core:network")
+include(":core:ui")
+
+include(":feature:dictionary")
+include(":feature:setup")
+include(":feature:settings")
+include(":feature:words")
+

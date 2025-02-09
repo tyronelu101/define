@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Define</string>
+
+    <string name="dictionary">Dictionary</string>
+    <string name="words">Words</string>
+    <string name="setting">Settings</string>
+
 </resources>

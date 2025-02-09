@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ChineseDictionary",
+    "language": "Chinese"
+  },
+  {
+    "name": "EnglishDictionary",
+    "language": "English"
+  },
+  {
+    "name": "JapaneseDictionary",
+    "language": "Japanese"
+  }
+]

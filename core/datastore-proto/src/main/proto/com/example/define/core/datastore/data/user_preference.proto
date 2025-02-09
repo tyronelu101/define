@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.example.define.core.datastore.data";
+option java_multiple_files = true;
+
+message UserPreferences {
+  string sourceLanguage = 1;
+  string targetLanguage = 2;
+}
