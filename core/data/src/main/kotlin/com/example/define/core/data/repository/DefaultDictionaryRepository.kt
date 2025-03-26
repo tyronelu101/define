@@ -1,11 +1,10 @@
 package com.example.define.core.data.repository
 
-import com.example.define.core.database.daos.DefinitionDao
-import com.example.define.core.database.daos.DictionaryDao
-import com.example.define.core.database.daos.EntryDao
-import com.example.define.core.database.daos.PronunciationDao
-import com.example.define.core.database.daos.WordDao
+import com.example.define.core.database.daos.dictionary.DefinitionDao
+import com.example.define.core.database.daos.dictionary.DictionaryDao
+import com.example.define.core.database.daos.dictionary.PronunciationDao
 import com.example.define.core.database.entities.DictionaryEntity
+import com.example.define.core.database.entities.toModel
 import com.example.define.core.models.DictionaryModel
 import com.example.define.core.models.EntryModel
 import kotlinx.coroutines.flow.Flow
@@ -16,7 +15,6 @@ import javax.inject.Inject
 class DefaultDictionaryRepository @Inject constructor(
     private val dictionaryDao: DictionaryDao,
     private val entryDao: EntryDao,
-    private val wordDao: WordDao,
     private val definitionDao: DefinitionDao,
     private val pronunciationDao: PronunciationDao
 
@@ -27,7 +25,8 @@ class DefaultDictionaryRepository @Inject constructor(
             DictionaryEntity(
                 uuid = uuid,
                 name = dictionary.name,
-                language = dictionary.sourceLanguage
+                srcLanguage = dictionary.sourceLanguageCode,
+                targetLanguage = dictionary.targetLanguageCode
             )
         )
     }
@@ -36,7 +35,16 @@ class DefaultDictionaryRepository @Inject constructor(
 
     }
 
-    override suspend fun getLanguages(): List<String> {
+    override suspend fun getDictionary(uuid: String): DictionaryModel {
+//        return dictionaryDao.get(uuid)
+        return DictionaryModel("", "", "", "")
+    }
+
+    override suspend fun getAllDictionaries(): List<DictionaryModel> = dictionaryDao.getAll().map {
+        it.toModel()
+    }
+
+    override suspend fun getDictionariesSupportedFor(srcLanguageCode: String): List<DictionaryModel> {
         return emptyList()
     }
 
@@ -46,7 +54,6 @@ class DefaultDictionaryRepository @Inject constructor(
         targetLanguage: String
     ): Flow<List<EntryModel>> {
         return flow {
-            listOf(EntryModel("word", emptyList(), emptyList(), DictionaryModel("", "", "", "")))
 
         }
     }

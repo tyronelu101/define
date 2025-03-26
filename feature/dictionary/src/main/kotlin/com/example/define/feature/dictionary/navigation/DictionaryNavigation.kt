@@ -3,10 +3,10 @@ package com.example.define.feature.dictionary.navigation
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import com.example.define.core.models.LanguageSelectionType
 import com.example.define.feature.dictionary.HomeRoute
-import com.example.define.feature.dictionary.SearchRoute
 import com.example.define.feature.dictionary.LanguageRoute
-import com.example.define.feature.dictionary.types.LanguageSelectionType
+import com.example.define.feature.dictionary.SearchRoute
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -19,7 +19,7 @@ data class LanguageRoute(val type: LanguageSelectionType)
 data object SearchRoute
 
 fun NavController.navigateToSearch() =
-    navigate(HomeRoute)
+    navigate(SearchRoute)
 
 fun NavController.navigateToLanguageSelection(type: LanguageSelectionType) =
     navigate(route = LanguageRoute(type))

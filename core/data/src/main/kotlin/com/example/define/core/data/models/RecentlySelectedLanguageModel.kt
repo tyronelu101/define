@@ -1,12 +1,13 @@
 package com.example.define.core.data.models
 
 import com.example.define.core.database.entities.RecentlySelectedLanguageEntity
+import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 
 data class RecentlySelectedLanguageModel(
     val type: Int,
     val langCode: String,
-    val selectedDate: Instant
+    val selectedDate: Instant = Clock.System.now()
 )
 
 fun RecentlySelectedLanguageModel.toEntity(): RecentlySelectedLanguageEntity =

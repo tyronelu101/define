@@ -1,5 +1,7 @@
 package com.example.define.core.data.repository
 
+import com.example.define.core.data.models.SupportedLanguages
+import com.example.define.core.models.LanguageSource
 import com.example.define.core.network.DictionaryNetworkDataSource
 import javax.inject.Inject
 
@@ -7,81 +9,32 @@ class DefaultSupportedLanguagesRepo @Inject constructor(
     private val dictionaryRepo: DictionaryRepository,
     private val dictionaryNetworkSource: DictionaryNetworkDataSource
 ) : SupportedLanguagesRepo {
+    override suspend fun getAllSupportedLanguages(): List<SupportedLanguages> {
 
-    val languageCodes = listOf(
-        "af", // Afrikaans
-        "am", // Amharic
-        "ar", // Arabic
-        "az", // Azerbaijani
-        "be", // Belarusian
-        "bg", // Bulgarian
-        "bn", // Bengali
-        "bs", // Bosnian
-        "ca", // Catalan
-        "cs", // Czech
-        "cy", // Welsh
-        "da", // Danish
-        "de", // German
-        "el", // Greek
-        "en", // English
-        "es", // Spanish
-        "et", // Estonian
-        "eu", // Basque
-        "fa", // Persian
-        "fi", // Finnish
-        "fr", // French
-        "gl", // Galician
-        "gu", // Gujarati
-        "he", // Hebrew
-        "hi", // Hindi
-        "hr", // Croatian
-        "hu", // Hungarian
-        "hy", // Armenian
-        "id", // Indonesian
-        "is", // Icelandic
-        "it", // Italian
-        "ja", // Japanese
-        "ka", // Georgian
-        "kk", // Kazakh
-        "km", // Khmer
-        "kn", // Kannada
-        "ko", // Korean
-        "lt", // Lithuanian
-        "lv", // Latvian
-        "mk", // Macedonian
-        "ml", // Malayalam
-        "mn", // Mongolian
-        "mr", // Marathi
-        "ms", // Malay
-        "my", // Burmese
-        "ne", // Nepali
-        "nl", // Dutch
-        "no", // Norwegian
-        "pl", // Polish
-        "pt", // Portuguese
-        "ro", // Romanian
-        "ru", // Russian
-        "si", // Sinhala
-        "sk", // Slovak
-        "sl", // Slovenian
-        "sq", // Albanian
-        "sr", // Serbian
-        "sv", // Swedish
-        "sw", // Swahili
-        "ta", // Tamil
-        "te", // Telugu
-        "th", // Thai
-        "tr", // Turkish
-        "uk", // Ukrainian
-        "ur", // Urdu
-        "vi", // Vietnamese
-        "zh"  // Chinese
-    )
+        //Need to get all the supported languages without filtering
+        val localLanguages = dictionaryRepo.getAllDictionaries().map {
+            SupportedLanguages(
+                it.sourceLanguageCode,
+                it.targetLanguageCode,
+                source = LanguageSource.LOCAL
+            )
+        }
+        val networkLanguages = dictionaryNetworkSource.getAllLanguages().map {
+            SupportedLanguages(it.first, it.second, source = LanguageSource.REMOTE)
+        }.filter { !localLanguages.map { it.srcLanguageCode }.contains(it.srcLanguageCode) }
 
-    override suspend fun getSupportedLanguages(): List<String> {
-        val localLanguages = dictionaryRepo.getLanguages()
-        val networkLanguages = dictionaryNetworkSource.getLanguages()
+        return localLanguages + networkLanguages
+    }
 
-        return languageCodes
+    override suspend fun getSupportedLanguages(sourceLanguage: String): List<SupportedLanguages> {
+//
+//        val localLanguages = dictionaryRepo.getDictionariesSupportedFor(sourceLanguage).map {
+//            SupportedLanguages(it, source = LanguageSource.LOCAL)
+//        }
+//        val networkLanguages = dictionaryNetworkSource.getLanguages(sourceLanguage).map {
+//            SupportedLanguages(it, source = LanguageSource.REMOTE)
+//        }.filter { !localLanguages.map { it.srcLanguageCode }.contains(it.srcLanguageCode) }
+
+        return emptyList()
     }
 }

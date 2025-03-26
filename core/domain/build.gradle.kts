@@ -22,6 +22,7 @@ android {
 dependencies {
     implementation(project(":core:data"))
     implementation(project(":core:models"))
+    implementation(project(":core:network"))
 
     implementation(libs.google.dagger.hilt)
     implementation(libs.androidx.core.ktx)

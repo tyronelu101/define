@@ -32,6 +32,7 @@ android {
 
     dependencies {
         implementation(project(":core:data"))
+        implementation(project(":core:dictionary-loaders"))
         implementation(project(":core:domain"))
         implementation(project(":core:models"))
         implementation(project(":core:ui"))
@@ -44,6 +45,7 @@ android {
         implementation(libs.androidx.ui.tooling.preview)
         implementation(libs.google.dagger.hilt)
         ksp(libs.google.dagger.hilt.compiler)
+        implementation(libs.jetbrains.kotlinx.datetime)
         implementation(libs.jetbrains.kotlinx.serialization.json)
 
     }

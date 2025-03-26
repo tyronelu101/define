@@ -16,13 +16,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -37,7 +34,9 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.define.core.models.LanguageSource
 import com.example.define.ui.icons.DefineIcons
+import com.example.dictionary_loaders.jp.jmdict.JMdictLoader
 
 @Composable
 internal fun LanguageRoute(
@@ -47,13 +46,15 @@ internal fun LanguageRoute(
 ) {
     val supportedLanguages by viewModel.searchResults.collectAsState()
 
-    Log.i("Test", "Search result is ${supportedLanguages}")
+    Log.i("Test", "Search result is $supportedLanguages")
     LanguageScreen(
         languageItems = supportedLanguages,
         onBackClick = onBackClick,
         onItemClick = {
-            viewModel.onLanguageSelected(it)
-            onBackClick()
+//            val loader = JMdictLoader()
+
+//            viewModel.onLanguageSelect(it)
+//            onBackClick()
         },
         onSearch = viewModel::onSearch,
         modifier = modifier,
@@ -121,18 +122,38 @@ internal fun LanguageScreen(
         )
     }) { padding ->
         Column(modifier = Modifier.padding(padding)) {
-            LazyColumn {
-                items(items = languageItems, key = { languageItem ->
-                    when (languageItem) {
-                        is SupportedLanguageItem.Header -> languageItem.text
-                        is SupportedLanguageItem.Language -> languageItem.languageCode
-                    }
-                }) {
-                    LanguageItem(item = it, onItemClick = onItemClick)
-                }
+            LanguageList(languageItems, onItemClick, modifier = modifier)
+        }
+    }
+}
+
+@Composable
+private fun LanguageList(
+    languageItems: List<SupportedLanguageItem>,
+    onItemClick: (languageCode: String) -> Unit,
+    modifier: Modifier
+) {
+    LazyColumn {
+        items(items = languageItems, key = { languageItem ->
+            when (languageItem) {
+                is SupportedLanguageItem.Header -> languageItem.text
+                is SupportedLanguageItem.Language -> languageItem.languageCode
+            }
+        }) {
+            when (it) {
+                is SupportedLanguageItem.Header -> SectionHeader(it.text, modifier = modifier)
+                is SupportedLanguageItem.Language -> LanguageItem(
+                    item = it,
+                    onItemClick = onItemClick
+                )
             }
         }
     }
+}
+
+@Composable
+private fun SectionHeader(header: String, modifier: Modifier) {
+    Text(text = header)
 }
 
 @Composable

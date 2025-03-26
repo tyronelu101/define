@@ -36,4 +36,18 @@ class UserPreferencesDataSource @Inject constructor(private val userPreferences:
             Log.e("DefinePreferences", "Failed to update user preferences", ioException)
         }
     }
+
+    suspend fun toggleAISearch() {
+
+        try {
+//            userPreferences.updateData { currentPreferences ->
+//                currentPreferences.toBuilder()
+//                    .setSourceLanguage(targetLanguage).build()
+//            }
+        } catch (ioException: IOException) {
+            Log.e("DefinePreferences", "Failed to update user preferences", ioException)
+        }
+    }
+
+
 }

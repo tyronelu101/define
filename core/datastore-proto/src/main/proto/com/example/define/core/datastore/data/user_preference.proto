@@ -6,4 +6,5 @@ option java_multiple_files = true;
 message UserPreferences {
   string sourceLanguage = 1;
   string targetLanguage = 2;
+  bool aiSearch = 3;
 }

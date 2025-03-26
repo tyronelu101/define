@@ -1,5 +1,6 @@
 [versions]
 activityCompose = "1.9.3"
+androidDynamicFeature = "8.3.2"
 androidGradlePlugin = "8.3.2"
 androidTools = "31.7.3"
 androidxCore = "1.5.0"
@@ -12,6 +13,7 @@ datastore = "1.1.1"
 daggerHilt = "2.52"
 espressoCore = "3.5.1"
 googleGson = "2.11.0"
+gson = "2.10.1"
 hiltNavigationCompose = "1.2.0"
 junit = "4.13"
 junitVersion = "1.1.5"
@@ -19,6 +21,7 @@ kotlin = "2.0.20"
 kotlinAndroid = "2.0.20"
 kotlinxCoroutinesCore = "1.9.0"
 kotlinxCoroutinesTest = "1.10.1"
+kotlinxCoroutinesTestVersion = "1.10.1"
 kotlinxDateTime = "0.4.1"
 kotlinxSerializationJson = "1.7.1"
 ksp = "2.0.20-1.0.25"
@@ -30,6 +33,7 @@ protobufJavalite = "4.26.1"
 protobufKotlinlite = "4.26.1"
 protoBufPlugin = "0.9.4"
 room = "2.6.1"
+roomTesting = "2.6.1"
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
@@ -44,6 +48,7 @@ androidx-material3-adaptive-navigation-suite = { module = "androidx.compose.mate
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navVersion" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "roomTesting" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -81,6 +86,7 @@ jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-co
 jetbrains-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDateTime" }
 jetbrains-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTestVersion" }
 material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
 androidx-material3-adaptive-navigation-suite-android = { group = "androidx.compose.material3", name = "material3-adaptive-navigation-suite-android", version.ref = "material3AdaptiveNavigationSuiteAndroid" }
 
@@ -88,10 +94,10 @@ androidx-material3-adaptive-navigation-suite-android = { group = "androidx.compo
 #For android application
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-
+android-dynamic-feaure = { id = "com.android.dynamic-feature", version.ref = "androidDynamicFeature" }
 google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 google-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
-google-protobuf = { id = "com.google.protobuf", version.ref= "protoBufPlugin" }
+google-protobuf = { id = "com.google.protobuf", version.ref = "protoBufPlugin" }
 
 #For android libraries
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }

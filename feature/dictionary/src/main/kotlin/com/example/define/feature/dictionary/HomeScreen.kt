@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.define.core.models.UserPreferencesModel
-import com.example.define.feature.dictionary.types.LanguageSelectionType
+import com.example.define.core.models.LanguageSelectionType
 import com.example.define.ui.icons.DefineIcons
 import java.util.Locale
 

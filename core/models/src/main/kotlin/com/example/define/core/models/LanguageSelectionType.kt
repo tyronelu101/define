@@ -1,4 +1,4 @@
-package com.example.define.feature.dictionary.types
+package com.example.define.core.models
 
 enum class LanguageSelectionType {
     SOURCE, TARGET

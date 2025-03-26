@@ -7,6 +7,7 @@ import com.example.define.core.data.repository.DefaultSupportedLanguagesRepo
 import com.example.define.core.data.repository.DefaultUserPreferencesRepository
 import com.example.define.core.data.repository.DictionaryRepository
 import com.example.define.core.data.repository.DictionarySearchRepo
+import com.example.define.core.data.repository.FakeDictionaryRepository
 import com.example.define.core.data.repository.RecentlySelectedLanguageRepo
 import com.example.define.core.data.repository.SupportedLanguagesRepo
 import com.example.define.core.data.repository.UserPreferenceRepository
@@ -20,7 +21,7 @@ import dagger.hilt.components.SingletonComponent
 abstract class DataModule {
 
     @Binds
-    internal abstract fun bindDictionaryRepository(dictionaryRepository: DefaultDictionaryRepository): DictionaryRepository
+    internal abstract fun bindDictionaryRepository(dictionaryRepository: FakeDictionaryRepository): DictionaryRepository
 
     @Binds
     internal abstract fun bindDictionarySearchRepository(dictionarySearchRepository: DefaultDictionarySearchRepo): DictionarySearchRepo

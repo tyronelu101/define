@@ -1,16 +1,32 @@
 package com.example.define.core.database.entities
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
-import androidx.room.ForeignKey
+import androidx.room.Junction
+import androidx.room.PrimaryKey
+import androidx.room.Relation
 
-@Entity(primaryKeys = ["word", "entry_id"],
-    foreignKeys = [ForeignKey(
-        entity = EntryEntity::class,
-        parentColumns = arrayOf("id"),
-        childColumns = arrayOf("entry_id")
-    )])
+@Entity
 data class WordEntity(
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "word_id") val id: Long = 0L,
     @ColumnInfo(name = "word") val word: String,
-    @ColumnInfo(name = "entry_id") val entryId: Long
+)
+
+@Entity(primaryKeys = ["word_id", "pronunciation_id", "definition_id"])
+data class WordPronunciationDefinitionCrossRef(
+    @ColumnInfo(name = "word_id") val wordId: Long,
+    @ColumnInfo(name = "pronunciation_id") val pronunciationId: Long,
+    @ColumnInfo(name = "definition_id") val definitionId: Long
+)
+
+data class WordWithPronunciation(
+    @Embedded val word: WordEntity,
+    @Relation(
+        parentColumn = "word_id",
+        entityColumn = "pronunciation_id",
+        associateBy = Junction(WordPronunciationDefinitionCrossRef::class)
+    )
+    val pronunciations: List<PronunciationEntity>
 )

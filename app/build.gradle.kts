@@ -51,15 +51,15 @@ android {
 
 dependencies {
 
-    implementation(project(":feature:dictionary"))
+    implementation(project(":core:data"))
+    implementation(project(":core:models"))
+    implementation(project(":core:network"))
+    implementation(project(":core:ui"))
 
+    implementation(project(":feature:dictionary"))
     implementation(project(":feature:setup"))
     implementation(project(":feature:settings"))
     implementation(project(":feature:words"))
-
-    implementation(project(":core:data"))
-    implementation(project(":core:network"))
-    implementation(project(":core:ui"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
