@@ -13,27 +13,6 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="feature.setup">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="feature.dictionary">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="core.dictionary-loader">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="insertDictionary()">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="insertWordWithDictionaryReturnsCorrectWordAndDictionary()">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="insertDefinitionWithDictionaryReturnsDefinitionWithDictionary()">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="insertDefinitionWithDictionaryAndPronunciationsReturnsDefinitionWithDictionaryAndPronunciations()">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="insertWordWithDictionaryPronunciationAndDefinitionReturnsWordWithDefinitionDictionaryAndPronunciations()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>

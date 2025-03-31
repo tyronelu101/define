@@ -21,12 +21,9 @@ data class WordPronunciationDefinitionCrossRef(
     @ColumnInfo(name = "definition_id") val definitionId: Long
 )
 
-data class WordWithPronunciation(
+data class Entry(
     @Embedded val word: WordEntity,
-    @Relation(
-        parentColumn = "word_id",
-        entityColumn = "pronunciation_id",
-        associateBy = Junction(WordPronunciationDefinitionCrossRef::class)
-    )
-    val pronunciations: List<PronunciationEntity>
+    @Embedded val pronunciation: PronunciationEntity,
+    @Embedded val definition: DefinitionEntity,
+    @Embedded val dictionaryEntity: DictionaryEntity
 )

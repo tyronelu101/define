@@ -13,14 +13,14 @@ import androidx.room.Relation
         ForeignKey(
             entity = DictionaryEntity::class,
             parentColumns = arrayOf("dictionary_id"),
-            childColumns = arrayOf("dictionary_id")
+            childColumns = arrayOf("definition_owner_dictionary_id")
         )
     ]
 )
 data class DefinitionEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "definition_id") val id: Long = 0L,
-    @ColumnInfo(name = "dictionary_id") val dictionaryId: String,
+    @ColumnInfo(name = "definition_owner_dictionary_id") val dictionaryId: String,
     @ColumnInfo(name = "definition") val definition: String,
     @ColumnInfo(name = "part_of_speech") val partOfSpeech: String
 )
@@ -28,7 +28,7 @@ data class DefinitionEntity(
 data class DefinitionWithDictionary(
     @Embedded val definition: DefinitionEntity,
     @Relation(
-        parentColumn = "dictionary_id",
+        parentColumn = "definition_owner_dictionary_id",
         entityColumn = "dictionary_id"
     )
     val dictionary: DictionaryEntity
@@ -37,7 +37,7 @@ data class DefinitionWithDictionary(
 data class DefinitionWithDictionaryAndPronunciations(
     @Embedded val definition: DefinitionEntity,
     @Relation(
-        parentColumn = "dictionary_id",
+        parentColumn = "definition_owner_dictionary_id",
         entityColumn = "dictionary_id"
     )
     val dictionary: DictionaryEntity,
@@ -47,19 +47,4 @@ data class DefinitionWithDictionaryAndPronunciations(
         associateBy = Junction(WordPronunciationDefinitionCrossRef::class)
     )
     val pronunciations: List<PronunciationEntity>,
-)
-
-data class DefinitionWithPronunciationsAndDictionary(
-    @Embedded val definition: DefinitionEntity,
-    @Relation(
-        parentColumn = "definition_id",
-        entityColumn = "pronunciation_id",
-        associateBy = Junction(WordPronunciationDefinitionCrossRef::class)
-    )
-    val pronunciations: List<PronunciationEntity>,
-
-    @Relation(
-        parentColumn = "dictionary_id",
-        entityColumn = "dictionary_id")
-    val dictionary: DictionaryEntity
 )

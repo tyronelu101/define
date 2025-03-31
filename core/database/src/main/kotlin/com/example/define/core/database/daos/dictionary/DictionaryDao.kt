@@ -24,7 +24,7 @@ interface DictionaryDao {
     fun delete(dictionary: DictionaryEntity)
 
     @Transaction
-    @Query("SELECT * from DefinitionEntity where dictionary_id = :dictionaryId")
+    @Query("SELECT * from DefinitionEntity where definition_owner_dictionary_id = :dictionaryId")
     fun getDefinitionWithDictionary(dictionaryId: String): DefinitionWithDictionary
 
     @Transaction

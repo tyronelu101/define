@@ -142,10 +142,8 @@ class DictionaryTest {
 
     @Test
     fun insertWordWithDictionaryPronunciationAndDefinitionReturnsWordWithDefinitionDictionaryAndPronunciations() {
-        val entry = wordDao.getPronunciation(3)
-        val x = entry
-
-        db.close()
+        val entries = wordDao.getEntries("行", "jp", "en")
+        assert(entries.size == 2)
     }
 
     private fun populateDatabase() {
